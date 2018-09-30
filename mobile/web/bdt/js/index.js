@@ -231,15 +231,15 @@ function configDynamicList(result,index){
             }
         }
 // 开始点评
-        if(result.data.list[i].data.length){
+        if(result.data.list[i].comment.length){
             for(var k=0;k<result.data.list[i].comment.length;k++){
                 if(result.com == result.data.list[i].comment[k].member_id){
-                    pubcommentClick();
+                    pubcommentClick()
                 }
             }
         }
 
-        
+
         //循环点赞
         if(result.data.list[i].dianzan){
             var dianzan = result.data.list[i].dianzan.length;
