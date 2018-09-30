@@ -1,7 +1,7 @@
-vendor
-backend
-common
-console
-environments
-mobile/runtime/*
+vendor/
+backend/
+common/
+console/
+environments/
+mobile/runtime/
 mobile/web/MP_verify_NZjBRLUrNFOfYJ89.txt
