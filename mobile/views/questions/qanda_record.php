@@ -3,6 +3,7 @@
 <link type="text/css" rel="stylesheet" href="../bdt/css/photoswipe.css" />
 <link type="text/css" rel="stylesheet" href="../bdt/css/default-skin.css" />
 <link type="text/css" rel="stylesheet" href="../bdt/css/qanda.css" />
+<link type="text/css" rel="stylesheet" href="../bdt/css/qanda_record.css" />
 <script type="text/javascript" src="../bdt/js/swiper-3.4.0.min.js"></script>
 <script type="text/javascript" src="../bdt/js/photoswipe.min.js"></script>
 <script type="text/javascript" src="../bdt/js/photoswipe-ui-default.js"></script>
@@ -15,6 +16,8 @@
         width:50%;
         height:50%;
     }
+    .answerway0{width:50%;float:left;}
+    .qanda-certify-rights>div>input[type=text]{width:3.5rem!important;}
 </style>
 <div id="container" class="container">
     <div id="page">
@@ -63,8 +66,9 @@
                 <!--选择回答方式-->
                 <?php if($info['status'] == 1):?>
                 <!--选择回答收费方式-->
-                   <div class="chooseansway" id="chooseansway">
+                   <div class="chooseansway" id="chooseansway" style="overflow:hidden;">
                         <!--语音回答-->
+
                        <div class="answerway0">
                            <div class="qnada-q-data-limit" style="padding:15px;background:white;">
                                <span class="appui_switch appui_switch0"><i class="bg-white"></i></span>

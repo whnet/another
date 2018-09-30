@@ -8,8 +8,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <body>
 <link type="text/css" rel="stylesheet" href="../bdt/css/user.min.css">
-<script type="text/javascript" src="../bdt/js/jquery.cookie.js"></script>
-
 
 <div id="container" class="container usercenter-container bg-grey">
     <div id="page">
@@ -58,14 +56,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="function-module">
                     <!--功能列表-->
                     <div class="function bg-white bc-grey mt10">
-                        <a class="function-btn bc-grey fc-black" href="myhomepage.html?read=1">
+	                    <?php if($user['expert']['vip'] == 1):?>
+                        <a class="function-btn bc-grey fc-black" href="myhomepage.html?read=0">
+                            <?php else:?>
+                            <a class="function-btn bc-grey fc-black" href="myhomepage.html?read=1">
+                            <?php endif;?>
                             <img class="btn-img" src="../bdt/images/icon6_grey.png">
                             <span class="fs30">我的问答</span>
                             <img class="btn-arrow" src="../bdt/images/icon06.png">
-                            <em class="statistic">
-                                <i class="fs28 fc-greyabc" id="unAnswerQa" style="display:block;"></i>
-                                <i class="fs28 fc-greyabc" id="unreadQa" style="display: block;"></i>
-                            </em>
                         </a>
                         <a class="function-btn bc-grey fc-black" href="mynotice.html">
                             <img class="btn-img" src="../bdt/images/icon03_grey.png">
@@ -165,20 +163,5 @@ $this->params['breadcrumbs'][] = $this->title;
         }
     )
 </script>
-<script>
-    //  问答消息进度调显示隐藏
-    $(function(){
-        if($.cookie("is_cookie")!='yes'){
-            $(".downloadBar").show();
-            $(".downloadBar .closebtn").click(function(){
-                $(".downloadBar").hide();
-                // alert("2")
-                $.cookie("is_cookie","yes",{expires:1});
-                // alert("3")
-            })
-        }else if($.cookie("is_cookie")=='yes'){
-            $(".downloadBar").hide();
-        }
-    })
-</script>
+
 </body>

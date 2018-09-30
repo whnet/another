@@ -1,8 +1,8 @@
 <div id="downloadBar" class="downloadBar" style="display:none">
-    <span onclick="window.location.href='/members/myhomepage.html?read=1'">您有新的问题要回答</span>
+    <span onclick="window.location.href='/members/myhomepage.html?read=0'">您有新的问题要回答</span>
     <div class="closebtn bar-item downloadbar-close"  onclick="$('#downloadBar').hide()">
         <img src="../bdt/images/nav_icon_close3.png"/></div>
-    <div class="bar-item downloadbar-open" onclick="window.location.href='/members/myhomepage.html?read=0'">点击查看</div>
+    <div class="bar-item downloadbar-open" onclick="window.location.href='/members/myhomepage.html?read=1'">点击查看</div>
 </div>
 
 <div class="tab-con">

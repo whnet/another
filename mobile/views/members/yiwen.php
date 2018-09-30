@@ -15,12 +15,23 @@ $this->params['breadcrumbs'][] = $this->title;
 		font-size:20px;
 		margin-left:0.3rem;
 	}
+	/*.fc-blue,.statebar .tab-btn.tab-btn-two>a{width:32%!important;}*/
+	.fc-white{color:white!important}
 </style>
 <script type="text/javascript" src="../bdt/js/myhomepage.js"></script>
 <body class="bg-white">
 <div id="container" class="container myhomepage-container bg-white">
 	<div id="page">
+		<div class="page__hd bg-white fc-red b-b-grey has-tab scrollhd">
+			<div class="statebar">
+				<a class="nav-act left-act" onclick="goBack();">
+					<img src="../bdt/images/nav_icon_back1.png"></a>
+				<h2 class="fs34" style="color:black;height:2.7rem;line-height:2.7rem;">追问</h2>
+			</div>
+		</div>
+		<div class="clear"></div>
 		<div class="page__bd mb10 bg-greyfa scrollhd">
+			<div class="top-space4"></div>
 			<div class="homepagelist" id="homepage0">
 				<div class="my-qanda">
 					<div class="my-qanda-list" id="answerList">
@@ -47,7 +58,11 @@ $this->params['breadcrumbs'][] = $this->title;
 										<?php endif;?>
 									</div>
 								</div>
-								<p class="my-qanda-item-bd fs30 fc-black mt5 face_tag" onclick="gotoYi_recordHtml(<?=$v['id']?>,<?=$v['qaid']?>)">
+								<?php if($v['status'] == 2):?>
+                                <p class="my-qanda-item-bd fs30 fc-black mt5 face_tag" onclick="goDetail(<?=$v['qaid']?>)">
+									<?php else:?>
+                                <p class="my-qanda-item-bd fs30 fc-black mt5 face_tag" onclick="recordHtml(<?=$v['id']?>,<?=$v['qaid']?>)">
+									<?php endif;?>
 									<?=$v['question']?>
 								</p>
 								<div class="my-qanda-item-fd" style="margin-top:20px;">
@@ -64,8 +79,11 @@ $this->params['breadcrumbs'][] = $this->title;
 	</div>
 </div>
 <script>
-    function gotoYi_recordHtml(listId, qaid){
+    function recordHtml(listId, qaid){
         window.location.href = "/questions/yiwen_record.html?id="+listId+"&qaid="+qaid;
+    }
+    function goDetail(qaid){
+        window.location.href = "/questions/qanda_detail.html?id="+qaid;
     }
 </script>
 </body>

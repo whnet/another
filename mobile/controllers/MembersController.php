@@ -623,7 +623,7 @@ class MembersController extends BaseController
         //我的提问
         $ask = $model->find()->asarray()
             ->where(['member_id'=>$member_id])
-            ->with('user')->orderBy('created DESC')->all();
+            ->with('user','next')->orderBy('created DESC')->all();
         
         return $this->render('myhomepage',[
             'answer'=>$answer,
@@ -649,6 +649,28 @@ class MembersController extends BaseController
 			->with('user')->orderBy('created DESC')->all();
 		
 		return $this->render('yiwen',[
+			'answer'=>$answer,
+			'member_id'=>$member_id,
+		]);
+	}
+	// 追问追答 我的回答
+	public function actionYida(){
+		$member_id = Yii::$app->session['member_id'];
+		if(!$member_id){
+			Yii::$app->session['tryinto'] = Yii::$app->request->getUrl();
+			return $this->redirect('/members/login.html');
+		}
+		//查看是否通过点击通知栏进入我的问答中 $_GET['read']
+		if(isset($_GET['read']) && $_GET['read'] == 1){
+			Yii::$app->session['read'] = 1;
+		}
+		$model = new Zhuiquestions();
+		//我的回答,
+		$answer = $model->find()->asarray()
+			->where(['member_id'=>$member_id,'qaid'=>intval($_GET['id'])])
+			->with('user')->orderBy('created DESC')->all();
+		
+		return $this->render('yida',[
 			'answer'=>$answer,
 			'member_id'=>$member_id,
 		]);

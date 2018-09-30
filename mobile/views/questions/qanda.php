@@ -10,6 +10,9 @@ $this->params['breadcrumbs'][] = $this->title;
 <script type="text/javascript" src="../bdt/js/searchCommon.js"></script>
 <script type="text/javascript" src="../bdt/js/qanda.js"></script>
 <script type="text/javascript" src="../bdt/js/commonQaList.js"></script>
+<style>
+    /*.appui_qanda-voice-ctrlbar{width:90%!important;}*/
+</style>
 
 <body>
 <div class="new_q_and_a" id="container">

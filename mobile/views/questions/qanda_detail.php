@@ -17,7 +17,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <script type="text/javascript" src="../bdt/js/editor_cursor_position.js"></script>
 
 <style>
-    .appui-qanda-answerstyle.voice{margin-left:0!important;}
+    .appui-qanda-answerstyle.voice{margin-left:0!important;display:inline-block;}
+    .appui-qanda-answer{position:relative;box-sizing:border-box;padding-left:3rem;padding-right:1.5rem;}
+    .answer-expert{position:absolute;top:0;left:1rem;}
+    .answer-expert-name>i{position:absolute;left:0;bottom:-1rem;width:1.5rem;text-align:center;display:inline-block;}
 </style>
 
 <div id="container" class="container">
@@ -402,4 +405,21 @@ $this->params['breadcrumbs'][] = $this->title;
             <a class="fc-black" id="appiu_js_page-cancel">取消</a></div>
     </div>
 </div>
+<!--分享提示框-->
+<div class="circle-share-dialog" id="shareView" style="display:none">
+    <div class="appui-mask black"></div>
+    <div class="circle-share-con">
+        <img src="../bdt/images/share1.png">
+        <a id="closeShare" class="circle-share-close">
+            <img src="../bdt/images/share-btn.png"></a>
+    </div>
+</div>
 </body>
+
+
+<script>
+
+$("#closeShare").click(function(){
+    $().hide(shareView);
+})
+</script>

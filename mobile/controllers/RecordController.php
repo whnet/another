@@ -199,7 +199,8 @@ class RecordController extends BaseController
 		//拼接后的语音名字
 		$userVoice = 'user_'.$member_id.'_'.time().rand(100,999);
 		$finalName = \Qiniu\base64_urlSafeEncode($bucket.':'.$userVoice.'.mp3');
-		$notifyUrl = 'http://chat.prcmc.cn/record/combine_notify.html';
+		$pre_url = Yii::$app->request->hostInfo;
+		$notifyUrl = $pre_url.'/record/combine_notify.html';
 		if($nums > 1){
 			$fops = "avconcat/2/format/mp3/".$voices;
 			$fops = $fops.'|saveas/'.$finalName;
@@ -275,7 +276,8 @@ class RecordController extends BaseController
 		//拼接后的语音名字
 		$userVoice = 'user_'.$member_id.'_'.time().rand(100,999);
 		$finalName = \Qiniu\base64_urlSafeEncode($bucket.':'.$userVoice.'.mp3');
-		$notifyUrl = 'http://chat.prcmc.cn/record/combine_notifyyiwen.html';
+		$pre_url = Yii::$app->request->hostInfo;
+		$notifyUrl = $pre_url.'/record/combine_notifyyiwen.html';
 		if($nums > 1){
 			$fops = "avconcat/2/format/mp3/".$voices;
 			$fops = $fops.'|saveas/'.$finalName;

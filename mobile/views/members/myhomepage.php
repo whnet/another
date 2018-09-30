@@ -34,8 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="statebar">
                 <a class="nav-act left-act" onclick="goBack();"><img src="../bdt/images/nav_icon_back1.png"></a>
                 <div class="tab-btn fs30 tab-btn-two" id="myhomepageTab">
-                    <a class="bg-blue fc-white " onclick="categoryListFunction(0);">我答</a>
-                    <a class="bg-blue" onclick="categoryListFunction(1);">我问</a>
+                    <a class="bg-blue fc-white mywenda" onclick="categoryListFunction(0);" >我答</a>
+                    <a class="bg-blue mywenda" onclick="categoryListFunction(1);">我问</a>
                 </div>
                 <a class="nav-act right-act" id="page-act">
                     <img src="../bdt/images/nav_icon_publish.png">
@@ -76,7 +76,11 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <?php endif;?>
                                 </div>
                             </div>
-                              <p class="my-qanda-item-bd fs30 fc-black mt5 face_tag" onclick="gotoQanda_recordHtml(<?=$v['id']?>,1,0,2)">
+	                       <?php if($v['status'] == 2):?>
+                              <p class="my-qanda-item-bd fs30 fc-black mt5 face_tag" onclick="goDetail(<?=$v['id']?>)">
+                          <?php else:?>
+                            <p class="my-qanda-item-bd fs30 fc-black mt5 face_tag" onclick="gotoQanda_recordHtml(<?=$v['id']?>,1,0,2)">
+                          <?php endif;?>
                                     <?php if($v['imgs'] != '[]'):?>
                                 <i class="appui-qanda-question-imgtag"><img src="../bdt/images/img-tag.png"></i>
                                 <?php endif;?>
@@ -107,7 +111,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                     <div class="my-qanda-list">
                         <?php foreach($ask as $k=>$v):?>
-                            <div class="my-qanda-item bg-white mb10" onclick="gotoArticDetailHtml(<?=$v['id']?>,'<?=$v['from']?>','<?=$v['publishtype']?>');">
+                            <div class="my-qanda-item bg-white mb10">
                                 <div class="my-qanda-item-hd"><a>
                                         <i>
                                             <img src="<?=$v['user']['photo']?>">
@@ -130,7 +134,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <span class="fc-orange fs30">￥<?=$v['askprice']?></span>
                                         <?php endif;?>
                                     </div></div>
-                                <p class="my-qanda-item-bd fs30 fc-black mt5 face_tag">
+                                <p class="my-qanda-item-bd fs30 fc-black mt5 face_tag" onclick="gotoArticDetailHtml(<?=$v['id']?>,'<?=$v['from']?>','<?=$v['publishtype']?>');">
                                     <?php if($v['imgs'] != '[]'):?>
                                         <i class="appui-qanda-question-imgtag">
                                             <img src="../bdt/images/img-tag.png">
@@ -141,6 +145,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <div class="my-qanda-item-fd">
                                     <i class="fs28 fc-greyabc"><?=date('Y-m-d H:i:s',$v['created'])?></i>
                                     <span class="fs28 fc-greyabc"><i><?=$v['views']?></i>浏览</span>
+	                                <?php if($v['next']):?>
+                                        <span class="zhui" onclick="gotoYida(<?=$v['id']?>)">追答</span>
+	                                <?php endif;?>
                                 </div>
                             </div>
                         <?php endforeach;?>
@@ -212,14 +219,19 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>
             <!--追问END-->
-            
         </div>
     </div>
 </div>
 
 <script>
+    function goDetail(qaid){
+        window.location.href = "/questions/qanda_detail.html?id="+qaid;
+    }
     function gotoYiwen(id){
         window.location.href = "/members/yiwen.html?id="+id;
+    }
+    function gotoYida(id){
+        window.location.href = "/members/yida.html?id="+id;
     }
     var content0 = $("#homepage0").find(".my-qanda-item-bd").text();
 //我问
@@ -242,7 +254,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
 // 追问
     $(".zhui").each(function(){
-        $(this).parents(".my-qanda-item").find(".zhui_space").css("display","block");
+        $(this).parents(".my-qanda-item").find(".zhui_space").css("display","none");
+        $(this).siblings(".fc-greyabc").css("display","none");
     });
+
+
 </script>
 </body>
