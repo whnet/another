@@ -16,6 +16,9 @@ $this->params['breadcrumbs'][] = $this->title;
 <script type="text/javascript" src="../bdt/js/edit.min.js"></script>
 <script type="text/javascript" src="../bdt/js/editor_cursor_position.js"></script>
 
+<style>
+    .appui-qanda-answerstyle.voice{margin-left:0!important;}
+</style>
 
 <div id="container" class="container">
     <div id="page">

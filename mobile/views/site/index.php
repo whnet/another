@@ -10,6 +10,7 @@ use common\tools\htmls;
 <script type="text/javascript" src="../bdt/js/commonQaList.js"></script>
 <script type="text/javascript" src="../bdt/js/searchCommon.js"></script>
 <script type="text/javascript" src="../bdt/js/index.js"></script>
+<script type="text/javascript" src="../bdt/js/indexcomment.js"></script>
 <script type="text/javascript" src="../bdt/js/commonArticList.js"></script>
 <script type="text/javascript" src="../bdt/js/commentListInPostlist.js"></script>
 <link type="text/css" rel="stylesheet" href="../bdt/css/index.css">

@@ -1,12 +1,20 @@
 
-// 开始点评
-if(result.data.list[i].data.length){
-    for(var k=0;k<result.data.list[i].comment.length;k++){
-        if(result.com == result.data.list[i].comment[k].member_id){
-            pubcommentClick();
-        }
-    }
-}
+// // 点击查看评论
+// $(document).ready(function(){
+//     var comment=$('.comment_num');
+//     var num=$('.comment_num').parent(".f-f-module").find(".comment").text();
+//     console.log(num);
+//     if(num==0){
+//         $('.comment_num').parent(".f-f-module").find(".comment_num").removeClass("on");
+//     }else if(num!=0){
+//         $('.comment_num').parent(".f-f-module").find(".comment_num").addClass("on");
+//     }
+// })
+
+
+
+
+
 // 评论
 function pubcommentClick(a,b,c,obj,n){
     alert("1")

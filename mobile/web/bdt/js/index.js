@@ -230,7 +230,16 @@ function configDynamicList(result,index){
                 }
             }
         }
+// 开始点评
+        if(result.data.list[i].data.length){
+            for(var k=0;k<result.data.list[i].comment.length;k++){
+                if(result.com == result.data.list[i].comment[k].member_id){
+                    pubcommentClick();
+                }
+            }
+        }
 
+        
         //循环点赞
         if(result.data.list[i].dianzan){
             var dianzan = result.data.list[i].dianzan.length;
@@ -327,8 +336,8 @@ function configDynamicList(result,index){
             '<span class="fc-greyabc"><i>' + result.data.list[i].counts + '</i>阅读</span>' +
             '<span class="fc-red"></span><div class="statistic">' +
             '<a class="like fc-greyabc ' + onFcRed + '" onclick="dianzanClick(' + result.data.list[i].id + ',1,' + result.mid + ')" id="dianzan' + result.data.list[i].id + '">' + dianzan + '</a>' +
-
-            '<a class="comment ml10 fc-greyabc" id="comment' + result.data.list[i].comment + '" onclick="pubcommentClick(' + result.data.list[i].id + ',1,' + result.com + ',this,1)" >' + comment + '</a>' +
+            // 评论
+            '<a class="comment ml10 fc-greyabc"  onclick="pubcommentClick(' + result.data.list[i].comment + ',1,' + result.com + ',this,1)" id="comment' + result.data.list[i].comment + '">' + comment + '</a>' +
 
             '<a class="comment_num ml10 fc-greyabc" id="comment_num_'+ result.data.list[i].id+'"  href="javascript:void(0)" ></a>'+
             '</div></div></div></div>';
@@ -415,42 +424,4 @@ function gotoLou(id){
 
 
 
-// 点击查看评论
-$(document).ready(function(){
-    var comment=$('.comment_num');
-     var num=$('.comment_num').parent(".f-f-module").find(".comment").text();
-     console.log(num);
-    if(num==0){
-        $('.comment_num').parent(".f-f-module").find(".comment_num").removeClass("on");
-    }else if(num!=0){
-        alert("1")
-        $('.comment_num').parent(".f-f-module").find(".comment_num").addClass("on");
-    }
-})
-
-
-
-// onFcRed = "";
-// if(result.data.list[i].dianzan.length){
-//     for(var j=0;j<result.data.list[i].dianzan.length;j++){
-//         if(result.mid == result.data.list[i].dianzan[j].member_id){
-//             onFcRed += 'on fc-red';
-//         }else{
-//             onFcRed += '';
-//         }
-//     }
-// }
-//
-// //循环点赞
-// if(result.data.list[i].dianzan){
-//     var dianzan = result.data.list[i].dianzan.length;
-// }else{
-//     var dianzan = 0;
-// }
-// //循环评论
-// if(result.data.list[i].comment){
-//     var comment = result.data.list[i].comment.length;
-// }else{
-//     var comment = 0;
-// }
 

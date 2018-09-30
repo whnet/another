@@ -15,15 +15,14 @@ $this->params['breadcrumbs'][] = $this->title;
         height:1.5rem;
         line-height:1.5rem;
         text-align:center;
-        border-radius:10%;
+        border-radius:.2rem;
         background:#e95513;
         color:white;
-        font-size:18px;
+        font-size:16px;
         position:absolute;
-        left:50%;
-        transform:translateX(-50%);
-        top:0;
-        margin-top:.5rem;
+        right:3%;
+        bottom:0;
+        margin-bottom:.5rem;
     }
 </style>
 <script type="text/javascript" src="../bdt/js/myhomepage.js"></script>
@@ -55,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="my-qanda-list" id="answerList">
                         <?php foreach($answer as $k=>$v):?>
                         <div class="my-qanda-item bg-white mb10">
-                            <div class="zhui_space" style="height:1.8rem;"></div>
+
                             <div class="my-qanda-item-hd">
                                 <a><i>
                                     <img src="<?=$v['user']['photo']?>">
@@ -92,6 +91,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <?php endif;?>
                                 </span>
                             </div>
+                        <div class="zhui_space" style="height:1.3rem;display:none"></div>
                         </div>
                         <?php endforeach;?>
                     </div>
@@ -240,6 +240,9 @@ $this->params['breadcrumbs'][] = $this->title;
         $("#homepage1").find(".appui-nocontent").show();
     }
 
-
+// 追问
+    $(".zhui").each(function(){
+        $(this).parents(".my-qanda-item").find(".zhui_space").css("display","block");
+    });
 </script>
 </body>
