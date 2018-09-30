@@ -1,0 +1,5 @@
+.cropper-modal,.cropper-drag-box{background-color:transparent!important;}
+.cropper-dashed.dashed-h,.cropper-dashed.dashed-v,#image{display:none;}
+.cropper-line,.cropper-point.point-se:before,.cropper-point{display:none!important;}
+.cropper-view-box{outline:1px solid red;}
+.upload-container>.row{top:50%!important;transform:translateY(-50%);margin-top:0!important;}

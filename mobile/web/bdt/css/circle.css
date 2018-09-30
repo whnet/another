@@ -1,0 +1,213 @@
+@charset "utf-8"; 
+/*圈子页面专用样式*/
+/* CSS Document --20170417*/
+
+:-moz-placeholder{color:rgba(0,0,0,0.5);}
+::-moz-placeholder{color:rgba(0,0,0,0.5);}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{color:rgba(0,0,0,0.5)}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{color:rgba(0,0,0,0.5);}
+
+.circle-search :-moz-placeholder{color:rgba(0,0,0,0.2);}
+.circle-search input:-ms-input-placeholder{color:rgba(0,0,0,0.2);}
+.circle-search input::-webkit-input-placeholder{color:rgba(0,0,0,0.2);}
+
+
+#circleContainer1,#circleContainer2{width:100%; max-width:27rem; min-width:16rem; height:100%; display:block; margin-right:auto; margin-left:auto; position:relative; overflow:hidden; position:absolute; top:0; left:100%; box-shadow:0 0 0.15rem rgba(85,119,187,0.05);}
+#circleContainer1{z-index:5;}
+#circleContainer2{z-index:4;}
+
+
+/*--------------------圈子--------------------start-----*/
+.circle{width:100%; height:auto; display:block; overflow:hidden; position:relative;}
+#myCircle,#recommandCircle{width:100%; height:auto; display:block; overflow:hidden; position:relative; padding-bottom:1rem;}
+
+/*创建圈子*/
+.circle-type-select{width:100%; height:auto; display:block; overflow:hidden; text-align:center; margin-top:50%;}
+.circle-type-select.charge-circle-creat{margin-top:3rem;}
+	.circle-type-select>a{width:5rem; height:7rem; display:inline-block; overflow:hidden; text-align:center; line-height:1rem;}
+		.circle-type-select>a>img{width:100%; height:auto; display:block; border:0.5rem solid #fafafa; box-sizing:border-box; border-radius:4rem;}
+.
+/*创建付费圈子*/
+/*金额输入*/
+.amount-input{width:60%; min-width:10rem; height:auto; display:block; margin:1rem auto 0; list-style:none;}
+	.amount-input-type{width:100%; height:2rem; display:block; overflow:hidden; position:relative; padding:0 2rem 0 1.5rem; box-sizing:border-box;}
+		.amount-input-type>span{width:auto; height:2rem; display:block; line-height:2rem; position:absolute; top:0;}
+		.amount-input-type>span:nth-of-type(1){left:0;}
+		.amount-input-type>span:nth-of-type(2){right:0;}
+		.amount-input-type>input[type=text]{width:100%; height:2rem; display:block; float:left; outline:none; border:none; text-align:center; line-height:2rem;}
+		.amount-input-type>input.on{font-size:1.25rem; color:#f54;}
+/*付费方式选择*/
+.pay-type{width:60%; height:1.5rem; display:block; margin:1rem auto 0;}
+	.pay-type>a{width:47%; height:1.5rem; display:block; float:left; color:#999; border:0.05rem solid #999; border-radius:2rem; text-align:center; line-height:1.4rem; box-sizing:border-box;}
+	.pay-type>a:nth-of-type(2){float:right;}
+	.pay-type>a.on{ color:#fff; border:0.05rem solid #57b; background:#57b;}
+
+/*创建付费圈子&&圈子编辑*/
+/*头像编辑*/
+.circle-base-edit{width:7rem; height:9rem; display:block; margin:3rem auto 1rem; position:relative; box-shadow:0 0 1rem rgba(85,119,187,0.05);}
+	.circle-photo-edit{width:7rem; height:7rem; display:block; overflow:hidden; position:absolute; top:-0.05rem; left:-0.05rem; background:url(../images/add_circle_pic.jpg?v=19700101080000) no-repeat; background-size:100%;}
+		.circle-photo-edit>input[type=file]{width:100%; height:100%; display:block; opacity:0; position:absolute; z-index:1;}
+		.circle-photo-edit>span{width:100%; height:100%; display:block; overflow:hidden; position:relative;}
+			.circle-photo-edit>span>i{width:1.5rem; height:1.5rem; display:block; position:absolute; top:0.5rem; right:0.5rem; border-radius:1.5rem; overflow:hidden;}
+	.circle-name-edit{width:100%; height:2rem; display:block; line-height:2rem; border:none; outline:none; position:absolute; bottom:0; background:none; box-sizing:border-box; padding:0 0.5rem; text-align:center;}
+/*圈子介绍编辑*/
+.circle-introduce-edit{width:80%; height:7.5rem; display:block; margin:2rem auto 0; border-radius:0.25rem; padding:0.75rem; line-height:1rem; text-align:justify; word-break:break-all; position:relative;}
+	.circle-introduce-edit>textarea{width:100%; height:6rem; display:block; border:none; outline:none; background:none;}
+	.circle-introduce-edit>span{width:auto; height:1rem; display:block; position:absolute; bottom:0.75rem; right:0.75rem; text-align:right; line-height:1rem;}
+
+/*我的圈子*/
+/*搜索圈子*/
+.circle-search{width:90%; height:1.5rem; display:block; overflow:hidden; position:relative; margin:0.5rem auto 0;}
+	.circle-search>span{width:2rem; height:1.5rem; display:block; position:absolute; top:0; left:0; background:url(../images/search.png?v=19700101080000) 50% 50% no-repeat; background-size:1.5rem; opacity:0.3;}
+		.circle-search>span:after{content:''; width:0.05rem; height:0.7rem; display:block; background:rgba(85,119,187,1); position:absolute; right:-0.05rem; top:0.4rem;}
+	.circle-search>input{width:100%; height:1.5rem; display:block; border-radius:1.5rem; border:0.05rem solid rgba(85,119,187,0.15); box-sizing:border-box; padding-left:2.5rem;}
+/*圈子推荐*/
+.circle-list-head{width:100%; height:2rem; display:block; overflow:hidden; padding:0.25rem 5%; box-sizing:border-box; line-height:1.5rem;}
+	.circle-list-head>h3{width:auto; height:1.5rem; display:block; float:left;}
+	.circle-list-head>a{width:auto; height:1.5rem; display:block; float:right;}
+/*圈子列表*/
+.circle-list{width:90%; height:auto; display:block; margin:0 auto;}
+.circle-item>span>img{height:100%}
+	.circle-list>div:nth-of-type(2n+1){float:left;}
+	.circle-list>div:nth-of-type(2n+2){float:right;}
+	/*一排两个圈子列表*/
+	.circle-item{width:48%; height:auto; display:block; overflow:hidden; box-shadow:0 0 0.5rem rgba(85,119,187,0.15); margin:0.6rem 0 0 0; padding:0.5rem; box-sizing:border-box;}
+		.circle-item>span{width:100%; height:auto; display:block; overflow:hidden; position:relative;}
+			.circle-item>span>i{width:2rem; height:2rem; display:block; position:absolute; top:50%; left:50%; margin-top:-1rem; margin-left:-1rem; z-index:1;}
+			.circle-item>span>em{width:auto; height:1rem; display:block; position:absolute; top:0.5rem; right:0; border-radius:1rem 0 0 1rem; line-height:1rem; padding:0 0.25rem 0 1.125rem; background:url(../images/member.png?v=19700101080000) 0.125rem center no-repeat rgba(0,0,0,0.7); background-size:1rem;}
+				.circle-item>span>em>i{width:0.4rem; height:0.4rem; display:block; border-radius:0.4rem; position:absolute; top:0; left:0;}
+		.circle-item>i{width:1.2rem; height:0.1rem; display:block; margin:0 auto;}
+		.circle-item>h3 , .circle-item>h4{width:100%; height:1.8rem; display:block; padding:0 0.5rem; box-sizing:border-box; overflow:hidden; line-height:1.8rem; text-align:center; white-space:nowrap; text-overflow:ellipsis; }
+		.circle-item>h4{line-height:1.2rem; height:1.2rem; }
+			.circle-item>h4>img{width:0.8rem; height:0.8rem; display:inline; margin-right:0.15rem; vertical-align:middle;}
+	/*横向排版圈子列表*/
+	.circle-item-x{width:100%; height:auto; min-height:4rem; display:block; overflow:hidden; position:relative; padding:0.5rem; box-sizing:border-box;}
+		.circle-headpic{width:2.5rem; height:2.5rem; display:block; overflow:hidden; border-radius:2.5rem; position:absolute; top:0.75rem; left:0.5rem;}
+		.circle-info{width:100%; height:auto; display:block; padding-left:2.75rem; box-sizing:border-box;}
+			.goto-circle{width:auto; height:1.5rem; display:block; float:right; padding:0 0.5rem; line-height:1.4rem; border-radius:0.25rem; box-sizing:border-box;}
+			.circle-info-name{width:auto; height:0.9rem; line-height:0.9rem; display:block; float:left;}
+			.circle-info-canshu{width:auto; height:0.6rem; line-height:0.6rem; display:block; float:left; clear:left;}
+			.circle-info-introduce{width:100%; height:auto; display:block; line-height:0.8rem; overflow:hidden; float:left;}
+		    .circle-headpic>img{height:100%!important;}
+			
+/*创建圈子按钮*/
+.creat-circle-act{width:100%; height:2.5rem; display:block; position:absolute; bottom:2.5rem;
+filter:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=rgba(255,255,255,0),endColorStr=rgba(255,255,255,1));/*IE 6 7 8*/
+background: -ms-linear-gradient(top, rgba(255,255,255,0),  rgba(255,255,255,1));/* IE 10 */
+background:-moz-linear-gradient(top,rgba(255,255,255,0),rgba(255,255,255,1));/*火狐*/ 
+background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(rgba(255,255,255,0)), to(rgba(255,255,255,1)));/*谷歌*/ 
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0)), to(rgba(255,255,255,1)));/* Safari 4-5, Chrome 1-9*/
+background: -webkit-linear-gradient(top,rgba(255,255,255,0), rgba(255,255,255,1));/*Safari5.1 Chrome 10+*/
+background: -o-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));/*Opera 11.10+*/}		
+	.creat-circle-btn{width:90%; height:2rem; display:block; margin:0 5% 0.5rem; border-radius:2rem; text-align:center; line-height:2rem;}
+
+/*圈子主页*/
+/*圈子主业头部*/
+.circle-pagehead{width:auto; height:10.5rem; display:block; overflow:hidden; position:relative;}
+	.circle-pagehead-bg{width:120%; height:auto; display:block; position:absolute; top:0; left:50%; margin-left:-60%;}
+	.circle-pagehead-body{width:100%; height:10.5rem; display:block; padding-top:2.2rem; box-sizing:border-box; position:relative;
+	filter:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=rgba(85,119,187,0.5),endColorStr=rgba(51,204,187,0.5)); 
+	background: -ms-linear-gradient(top, rgba(85,119,187,0.5),  rgba(51,204,187,0.5)); 
+	background:-moz-linear-gradient(top,rgba(85,119,187,0.5),rgba(51,204,187,0.5)); 
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(rgba(85,119,187,0.5)), to(rgba(51,204,187,0.5))); 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(85,119,187,0)), to(rgba(51,204,187,0.5))); 
+	background: -webkit-linear-gradient(top,rgba(85,119,187,0.5), rgba(51,204,187,0.5)); 
+	background: -o-linear-gradient(top, rgba(85,119,187,0.5), rgba(51,204,187,0.5));}
+		.circle-pagehead-headpic{width:3rem; height:3rem; display:block; border-radius:3rem; border:0.05rem solid rgba(255,255,255,0.3); box-sizing:border-box; box-shadow:0 0 0.5rem rgba(255,255,255,0.15); padding:0.25rem; position:relative; margin:0 auto;}
+			.circle-pagehead-headpic:before{content:''; width:3.5rem; height:3.5rem; display:block; position:absolute; top:50%; left:50%; margin-top:-1.75rem; margin-left:-1.75rem;border:0.05rem solid rgba(255,255,255,0.2); box-sizing:border-box; border-radius:3.5rem;}
+			.circle-pagehead-headpic:after{content:''; width:4rem; height:4rem; display:block; position:absolute; top:50%; left:50%; margin-top:-2rem; margin-left:-2rem;border:0.05rem solid rgba(255,255,255,0.1); box-sizing:border-box; border-radius:34rem;}
+			.circle-pagehead-headpic>img{width:2.5rem; height:2.5rem; display:block; overflow:hidden; border-radius:2.5rem;border:0.05rem solid rgba(255,255,255,0.4); box-sizing:border-box; position:absolute; top:50%; margin-top:-1.25rem; left:50%; margin-left:-1.25rem;}
+		.circle-name-info{width:90%; height:2rem; display:block; padding:0; box-sizing:border-box; margin:1rem auto 0; text-align:center;}
+			.circle-qunzhu{width:auto; height:1rem; display:inline-block; margin:0 auto; overflow:hidden; line-height:1rem; text-align:center; white-space:nowrap; text-overflow:ellipsis;background:url(../images/circle_qunzhu.png?v=19700101080000) left center no-repeat; background-size:0.6rem; padding-left:0.75rem;}
+			.circle-abstract{width:100%; height:auto; max-height:2.4rem; display:-webkit-box; text-overflow:-o-ellipsis-lastline; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:3; -webkit-box-orient:vertical; line-height:0.8rem; text-align:center;}
+		
+/*圈子主页提问发布成员按钮*/
+.circle-actbtn-bar{width:100%; height:2.5rem; display:block; padding:0.5rem 0; box-sizing:border-box; text-align:center;}
+	.circle-actbtn-bar>a{width:25%; height:1.5rem; display:inline-block; border-radius:0.25rem; text-align:center; line-height:1.4rem; margin:0 5%; box-sizing:border-box;}
+	.circle-ask-btn{}
+	.circle-pub-btn{}
+	.circle-member-btn{border:0.05rem solid #e95513; color:#e95513;}
+		.circle-actbtn-bar>a>img{width:1.4rem; height:1.4rem; display:inline; vertical-align:middle;}
+/*圈子分享详情*/
+.circle-share-detail{width:100%; height:auto; display:block; overflow:hidden;}
+	/*分享详情头部*/
+	.csd-head{width:100%; height:9rem; display:block; overflow:hidden; position:relative;}
+		.csd-head-bg{width:120%; height:auto; display:block; position:absolute; top:0; left:50%; margin-left:-60%; transition:all 0.5s;}
+		.csd-head-body{width:100%; height:100%; display:block; overflow:hidden; position:relative; z-index:1;background:rgba(255,255,255,0.3)}	
+			.csd-head-body>i{width:3rem; height:3rem; display:block; margin:2rem auto 0; border-radius:2.5rem; box-sizing:border-box; border:0.1rem solid #f54; position:relative;}
+					.csd-head-body>i>img{border:0.15rem solid rgba(255,255,255,0); box-sizing:border-box; border-radius:100%;}
+					.csd-head-body>i:before{content:''; width:1rem; height:0.75rem; display:block; position:absolute; top:-1rem; left:50%; margin-left:-0.5rem; background:url(../images/red_crown.png?v=19700101080000) no-repeat; background-size:1rem 0.75rem;}
+					.csd-head-body>i:after{content:'';width:0; height:0; display:block; position:absolute; bottom:-0.5rem; left:50%; margin-left:-0.125rem; border-left:0.25rem solid transparent; border-right:0.25rem solid transparent; border-top:0.5rem solid #f54;}
+			.csd-head-body>h4{width:100%; height:1rem; display:block; line-height:1rem; text-align:center;}
+			.csd-head-body>p{width:100%; height:1rem; display:block; line-height:1rem; text-align:center;}
+	/*分享圈子资料*/
+	.csd-brief{width:100%; height:auto; display:block; overflow:hidden; padding:0.5rem 0.5rem 0.5rem 0.75rem; box-sizing:border-box;}
+		.csd-brief>div{width:100%; height:auto; display:block; padding:0.25rem 0 0.25rem 0.75rem; box-sizing:border-box; border-left:0.05rem solid #de6573; position:relative;}
+			.csd-brief>div>h4{width:100%; height:1rem; display:block; line-height:1rem;}
+			.csd-brief>div>p{width:100%; height:auto; display:block; line-height:0.8rem; text-align:justify; word-break:break-all;}
+		/*圈子简介*/
+		.csd-brief-info{}
+			.csd-brief-info>h4{color:#de6573;}
+		/*圈子成员*/	
+		.csd-brief-member{}
+			.csd-brief-member>h4{color:#7dd7df;}
+			.csd-brief-member-list{width:100%; height:1.5rem; display:block; overflow:hidden;}
+				.csd-brief-member-list>img{width:1.5rem; height:1.5rem; display:block; float:left; border-radius:1.5rem; overflow:hidden; position:relative; margin-left:-0.15rem;}
+				.csd-brief-member-list>img:nth-of-type(1){z-index:0; margin-left:0;}
+				.csd-brief-member-list>img:nth-of-type(2){z-index:1;}
+				.csd-brief-member-list>img:nth-of-type(3){z-index:2;}
+				.csd-brief-member-list>img:nth-of-type(4){z-index:3;}
+				.csd-brief-member-list>img:nth-of-type(5){z-index:4;}
+				.csd-brief-member-list>img:nth-of-type(6){z-index:5;}
+				.csd-brief-member-list>img:nth-of-type(7){z-index:6;}
+				.csd-brief-member-list>img:nth-of-type(8){z-index:7;}
+				.csd-brief-member-list>img:nth-of-type(9){z-index:8;}
+				.csd-brief-member-list>img:nth-of-type(10){z-index:9;}
+				.csd-brief-member-list>i{width:1.5rem; height:1.5rem; display:block; float:left; border-radius:1.5rem; line-height:1.5rem; text-align:center; overflow:hidden; position:relative; margin-left:0.25rem; z-index:10; letter-spacing:0.01rem;}
+				
+		/*加入圈子*/	
+		.csd-brief-join{}
+			.csd-brief-join>h4{color:#babaec;}
+			
+			.csd-brief-liststyle{width:0.85rem; height:0.85rem; display:block; position:absolute; left:-0.5rem; border-radius:1rem; background:#fff;}
+				.csd-brief-liststyle>i{width:0.55rem; height:0.55rem; display:block; position:absolute; top:0.15rem; left:0.15rem; border-radius:0.55rem; background:#de6573;}
+			.csd-brief-info>em{border:0.05rem solid #de6573;}
+				.csd-brief-info>em>i{background:#de6573;}
+			.csd-brief-member>em{border:0.05rem solid #7dd7df;}
+				.csd-brief-member>em>i{background:#7dd7df;}
+			.csd-brief-join>em{border:0.05rem solid #babaec;}
+				.csd-brief-join>em>i{background:#babaec;}
+		
+	/*主题预览*/	
+	.theme-show{width:100%; height:auto; display:block; overflow:hidden;}
+		.theme-show-tag{width:auto; height:1.2rem; display:block; float:left; line-height:1.2rem; padding:0 0.5rem; border-radius:0 0.6rem 0.6rem 0;}
+		.f-f-module>.module-container>a.add-follow{font-size:12px; color:#B5B5B5; text-align:right;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

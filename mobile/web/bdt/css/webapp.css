@@ -1,0 +1,50 @@
+@charset "utf-8"; 
+/*WEBAPP页面专用样式*/
+/* CSS Document -汪飞-20170425*/
+
+:-moz-placeholder{color:rgba(0,0,0,0.5);}
+::-moz-placeholder{color:rgba(0,0,0,0.5);}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{color:rgba(0,0,0,0.5)}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{color:rgba(0,0,0,0.5);}
+
+
+/*webapp弹出登录页面用样式*/
+.webapp-login{width:100%; height:100%; display: block; overflow: hidden; position: absolute; top: 0; left: 0; z-index: 4;}
+	/*.webapp-login-logo{width:4rem; height: 4rem; display: block; margin: 4rem auto 0; border-radius: 0.75rem; overflow: hidden;}
+	.webapp-login-slogan{width:1rem; height: auto; display: block; margin: 2rem auto 0; text-align: center;}
+	.wechat-login{width:7rem; height: 2rem; display:block; margin:5rem auto 0; box-sizing:border-box; padding:0.2rem 0.5rem; line-height: 1.4rem;}
+		.wechat-login>img{width:1.4rem; height: 1.4rem; display: inline; vertical-align: middle;}
+
+	.orther-login{width:100%; height: 2rem; position:absolute; bottom: 1rem; left:0; text-align: center; line-height: 2rem;}
+		.orther-login:before , .orther-login:after{content:''; width:38%; height: 0.05rem; display: block; position: absolute;top: 50%; margin-top:-0.025rem; background: rgba(255,255,255,0.3);}
+		.orther-login:before{ left: 0; }
+		.orther-login:after{ right: 0; }*/
+	.webapp-login>img{width:100%; height:100%; display:block; position:absolute; top:0; left:0;}
+	/*.webapp-login>a{width:50%; height:2.25rem; display:block; border-radius:2.25rem; text-align:center; line-height:2.15rem; position:absolute; left:25%;}*/
+	.webapp-login>a {width: 46%;  height: 2.2rem;  display: block;  text-align: center;  line-height: 2.2rem;  position: absolute;  left: 27%;  background: url(images/login_btn.png) no-repeat center center;  -webkit-background-size: 100% 100%;  background-size: 100% 100%; color: #222;}
+	.webapp-login>a.wechat-login{ bottom:6.5rem;}
+	.webapp-login>a.phone-login{ bottom:3.5rem;}
+	.webapp-login>a>img{width:2rem; height:2rem; display:inline-block; vertical-align:middle;}
+	.webapp-login>a.phone-login > img{width: 1.8rem;height: 1.8rem;}
+
+
+@media screen and (max-width: 320px) {
+.webapp-login{background:#66a5ea;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

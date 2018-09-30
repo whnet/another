@@ -1,0 +1,54 @@
+@media screen and (max-width: 414px){#smallNav>div:nth-of-type(1)>p>span{padding:0 10px;}}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(7) {
+    padding-left: 10px;
+}
+@media screen and (max-width:374px) {#smallNav>div:nth-of-type(1)>p>span:nth-child(6),#smallNav>div:nth-of-type(1)>p>span:nth-child(11){padding-left:10px;}
+    #smallNav>div:nth-of-type(1)>p>span:nth-child(7){padding-left:0;}}
+#smallNav>div:nth-of-type(1)>p{padding-right:0.5rem;}
+
+
+/*领域样式调整*/
+#showMoreBtn{display:none;}
+#smallNav>div:nth-of-type(1)>p>span{line-height:4.5rem;padding-bottom:1rem!important;margin-bottom:.25rem!important;
+    width:20%!important;padding-left:0!important;padding-right:0!important;}
+#smallNav>div:nth-of-type(1)>p>span{vertical-align:text-bottom;}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(1){
+    background:url("../images/field_01.png") no-repeat center .5rem;background-size:1.2rem;
+}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(2){
+    background:url("../images/field_02.png") no-repeat center .4rem;background-size:1.4rem;
+}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(3){
+    background:url("../images/field_03.png") no-repeat center .5rem;background-size:1.1rem;
+}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(4){
+     background:url("../images/field_04.png") no-repeat center .5rem;background-size:1.2rem;
+ }
+#smallNav>div:nth-of-type(1)>p>span:nth-child(5){
+    background:url("../images/field_05.png") no-repeat center .6rem;background-size:1rem;
+}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(6){
+    background:url("../images/field_06.png") no-repeat center .5rem;background-size:1.2rem;
+}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(7){
+    background:url("../images/field_07.png") no-repeat center .5rem;background-size:1.1rem;
+}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(8){
+    background:url("../images/field_08.png") no-repeat center .5rem;background-size:1.2rem;
+}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(9){
+    background:url("../images/field_09.png") no-repeat center .5rem;background-size:1.2rem;
+}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(10){
+    background:url("../images/field_10.png") no-repeat center .5rem;background-size:1.2rem;
+}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(11){
+    background:url("../images/field_11.png") no-repeat center .4rem;background-size:1.3rem;
+}
+
+#smallNav>div:nth-of-type(1)>p>span:nth-child(12){
+    background:url("../images/field_12.png") no-repeat center .5rem;background-size:1.1rem;
+}
+#smallNav>div:nth-of-type(1)>p>span:nth-child(13){
+    background:url("../images/field_13.png") no-repeat center .4rem;background-size:1.5rem;
+}

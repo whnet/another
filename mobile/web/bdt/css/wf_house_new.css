@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.new_index{ width:100%; max-width:38.4rem; min-width:16rem; height:auto; overflow:hidden;}
+/*---首页---快问快答入口02170218*/
+	/*.ask_answer{width:100%; height:auto; display:block; overflow:hidden; background:url(../images/ask_answer_bg.png?v=19700101080000) bottom center no-repeat #57b; background-size:100% auto;}
+		.ask_answer>p{width:100%; height:1.2rem; display:block; text-align:center; font-size:0;}
+		.ask_answer>p:nth-of-type(2){height:1rem; line-height:1rem; font-size:0.6rem;}
+			.ask_answer>p>span{width:auto; height:1.2rem; display:inline-block; line-height:1.2rem; vertical-align:middle;}
+			.ask_answer>p>em{width:0.05rem; height:0.8rem; display:inline-block; margin:0.1rem 0.5rem; opacity:0.3; vertical-align:middle;}
+		.ask_answer_btn{width:100%; height:1.6rem; display:block; text-align:center;}
+			.ask_answer_btn>a{width:4rem; height:1.6rem; display:inline-block; margin:0 0.5rem; line-height:1.6rem; text-align:center; border-radius:0.2rem;}
+			.ask_answer_btn>a.goask{background:#3cb;}
+			.ask_answer_btn>a.goanswer{background:#f54;}*/
+
+/*---首页---快问快答入口02170218*/
+	.ask_answer{width:100%; height:4rem; display:block;}
+		.ask_answer>a{width:50%; height:2rem; display:block; float:left; margin:1rem 0; text-align:center; font-size:0;}
+		.ask_answer>a:nth-of-type(2){border-left:0.05rem solid #eee; box-sizing:border-box;}
+			.ask_answer>a>i{width:2rem; height:2rem; display:inline-block; vertical-align:middle;}
+			.ask_answer>a>span{width:auto; height:2rem; display:inline-block; vertical-align:middle;}
+				.ask_answer>a>span>i:nth-of-type(1){width:auto; height:1.2rem; line-height:1.2rem; display:block;}
+				.ask_answer>a>span>i:nth-of-type(2){width:auto; height:0.8rem; line-height:0.8rem; display:block;}
+
+/*---首页---标签推荐02170223*/		
+	.label-recommend{width:100%; height:auto; display:block; padding:0 2%; box-sizing:border-box; overflow:hidden;}
+		.label-recommend-list{width:100%; height:auto; display:block; list-style:none; padding:0.25rem 0; overflow:hidden;}
+			.label-recommend-item{width:23.5%; height:2rem; display:block; overflow:hidden; float:left; margin:0.25rem 2% 0.25rem 0; position:relative; background:rgba(85,119,187,0.05); border-radius:0.25rem;}
+			.label-recommend-item:nth-of-type(4n+4){margin:0.25rem 0;}
+				.label-recommend-item>span{width:100%; height:2rem; display:block; line-height:2rem; text-align:center; padding:0 0.5rem; box-sizing:border-box;}
+				.label-recommend-item>img{width:2.5rem; height:2.5rem; display:block; position:absolute; left:50%; top:0.25rem; z-index:0; opacity:0.05;}
+		
+
+	/*.me_questions{width:100%; height:auto; overflow:hidden; padding:0.5rem 5%; box-sizing:border-box;}
+		.me_questions>a{ width:45%; height:2rem; display:block; float:left; background-color:#1d3b59; border-radius:1rem; font-size:0; text-align:center;}	
+		.me_questions>a:nth-of-type(2){margin-left:10%;}
+			.me_questions>a>i{width:1.2rem; height:1.2rem; display:inline-block; overflow:hidden; vertical-align:middle;}	
+			.me_questions>a>p{height:2rem; line-height:2rem; display:inline-block; overflow:hidden; margin-left:0.5rem; vertical-align:middle}	*/
+	/*.qa_recommendation{width:100%; height:auto; overflow:hidden; padding:0 0.5rem; box-sizing:border-box; border-left:none; border-right:none}	
+		.qr_list{width:100%; height:auto; min-height:2.5rem; overflow:hidden; position:relative; padding:0.75rem 0;}	
+		.qr_list:last-child.b-b-grey{border:none;}
+			.qr_list>.play_img{width:2.5rem; height:2.5rem; display:block; position:absolute; top:50%; left:0; margin-top:-1.25rem; }	
+				.play_img>i{width:2.5rem; height:2.5rem; display:block; overflow:hidden; position:absolute;top:0; left:0; border-radius:1.25rem }	
+				.play_img>span{width:1rem; height:1rem; overflow:hidden; position:absolute; top:50%; left:50%; margin-top:-0.5rem; margin-left:-0.4rem; }
+				.play_img>div{width:2.5rem; height:2.5rem;background-color:rgba(0,0,0,0.3);overflow:hidden; position:absolute;top:0.rem; left:0; border-radius:1.25rem }
+			.qa_information{width:100%; height:auto; overflow:hidden; padding:0 0 0 3rem; box-sizing:border-box;}	
+				.qa_information>span{width:100%; height:auto; max-height:2rem; line-height:1rem; display:inline-block; overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}	
+				.qa_information>div{width:100%; height:1rem; overflow:hidden; line-height:1rem; margin-top:0.25rem;}	
+					.qa_information>div>h1{float:left;}	
+					.qa_information>div>span{float:left;margin-left:0.5rem; margin-top:0.01rem}	*/
+	/*.house_expert{width:100%; height:auto; overflow:hidden;margin-top:0.5rem; border-left:none; border-right:none;}
+		.he_title{width:100%; height:auto; overflow:hidden;border-top:none; border-left:none; border-right:none; padding:0 0.5rem; box-sizing:border-box;}
+			.he_title>div{width:0.15rem; height:0.7rem; overflow:hidden;float:left; margin-top:0.65rem; border-top-left-radius:0.1rem; border-bottom-right-radius:0.1rem}
+			.he_title>h1{width:auto; height:auto; overflow:hidden;float:left; line-height:2rem; margin-left:0.25rem;}
+			.he_title>a{width:auto; height:auto; overflow:hidden;float:right}
+				.he_title>a>i{width:0.6rem; height:0.6rem; overflow:hidden; display:block; float:right; margin-top:0.7rem}
+				.he_title>a>p{width:auto; height:auto; overflow:hidden; display:block; float:right; line-height:2rem}
+		.expert{width:100%; height:auto; overflow:hidden; display:block; padding:0.5rem 0 1rem 0; box-sizing:border-box;}
+			.expert_list{width:100%; height:auto; display:block; overflow:hidden; float:left; box-sizing:border-box;}
+				.portrait{width:100%; height:auto; display:block; overflow:hidden; position:relative; }
+					.portrait>i:first-child{width:100%; height:auto; display:block; overflow:hidden;}
+					.portrait>div{width:100%; height:1rem; position:absolute; left:0; bottom:0; background:-webkit-linear-gradient(right,rgba(0,0,0,0) 20%,rgba(0,0,0,1)); opacity: 0.6;}
+					.portrait>p{width:100%; height:auto; line-height:1rem;position:absolute; left:0.15rem; bottom:0;}
+					.portrait>i:last-child{width:0.8rem; height:0.8rem; display:block; position:absolute; bottom:0.1rem; right:0.1rem; z-index:1;}
+				.expert_info{width:100%; height:3.05rem; display:block; overflow:hidden;}
+					.expert_info>p:nth-of-type(1){width:100%; height:1.6rem; line-height:0.8rem; overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; margin-top:0.25rem; }
+					.expert_info>p:nth-of-type(2){width:100%; height:0.8rem; display:block; overflow:hidden; margin-top:0.15rem;}
+						.expert_info>p:nth-of-type(2)>span{width:auto; display:block; float:left; text-align:center; overflow:hidden; line-height:0.7rem; padding:0 0.1rem; margin:0 0.15rem 0 0; box-sizing:border-box;}
+					.expert_info>h1{width:100%; height:1rem; line-height:1rem; overflow:hidden; margin-top:0.25rem;}*/
+				
+	.qa_recommend{width:100%; height:auto; overflow:hidden;}	
+		.qa_title{width:100%; height:auto; overflow:hidden; border-left:none; border-right:none; padding:0 0.5rem; box-sizing:border-box;}
+			.qa_title>div{width:0.15rem; height:0.7rem; overflow:hidden;float:left; margin-top:0.65rem; border-top-left-radius:0.1rem; border-bottom-right-radius:0.1rem}
+			.qa_title>h1{width:auto; height:auto; overflow:hidden;float:left; line-height:2rem; margin-left:0.25rem;}
+			.qa_title>a{width:auto; height:auto; overflow:hidden;float:right}
+				.qa_title>a>i{width:0.6rem; height:0.6rem; overflow:hidden; display:block; float:right; margin-top:0.7rem}
+				.qa_title>a>span{width:auto; height:auto; overflow:hidden; display:block; float:right; line-height:2rem}
+		.question_list{width:100%; height:auto; overflow:hidden; padding:0.75rem 0.5rem; margin-bottom:0.5rem; box-sizing:border-box; border-left:none; border-right:none;}
+		.search-resault-list .question_list{padding:0.75rem 0.5rem; margin:0;}
+		.search-resault-list div.question_list:last-child{border:none;}
+			.question_list>span{width:100%; height:auto; overflow:hidden; display:inline-block; line-height:1rem; }
+			.expert_answer{width:100%; height:auto; overflow:hidden; position:relative;}
+				.expert_answer>.portrait{width:2rem; height:auto; overflow:hidden; float:left; position:relative;}
+					.expert_answer>.portrait>i:first-child{width:2rem; height:auto; overflow:hidden; display:block; position:relative; border-radius:2rem;}
+					.expert_answer>.portrait>i:nth-child(2){width:0.6rem; height:0.6rem; overflow:hidden; display:block; position:absolute; right:0; bottom:0;}
+				.Voice{ width:7.5rem; height:auto;float:left; position:relative; margin-left:0.5rem; margin-top:0.25rem}
+					.Voice>i:nth-child(1){ width:0.8rem; height:auto; display:block; overflow:hidden; position:absolute; top:0.35rem; left:0.5rem;}
+					.Voice>i:nth-child(2){ width:7.5rem; height:auto; display:block; overflow:hidden;}
+					.Voice>p{ width:auto; height:auto;overflow:hidden;position:absolute; top:0; right:0.5rem; line-height:1.5rem }
+				.expert_answer>span:nth-of-type(1){width:auto; height:1.6rem; float:left; overflow:hidden; margin-top:0.25rem;line-height:1.6rem; margin-left:0.5rem}
+				.expert_answer>span:nth-of-type(2){width:auto; height:1.6rem; float:right; overflow:hidden; margin-top:0.25rem;line-height:1.6rem}
+		.expert_information{width:100%; height:auto; overflow:hidden; margin-top:0.25rem}
+			.expert_information>h1{width:100%; height:1rem; overflow:hidden; line-height:1rem; display:block;}
+			.expert_information>span{width:100%; height:auto; overflow:hidden; display:block;}
+		
+		.new_q_and_a{ width:100%; height:auto; overflow:hidden;}
+	.q_and_a{width:100%; height:auto; overflow:hidden; position:relative;border-top:none; border-left:none; border-right:none;}		
+		.q_and_a>i{width:0.55rem; height:1rem; overflow:hidden; display:block; position:absolute; top:0.8rem; left:0.5rem;}		
+		.q_and_a>h1{ width:100%; height:auto; line-height:2.2rem;  text-align:center;}	
+		
+	/*--------------------功能部件-首页轮播广告--------------------start-----*/
+.swiper{width:100%; height:auto; margin:0 auto; position:relative; overflow:hidden; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; -ms-backface-visibility:hidden; -o-backface-visibility:hidden;backface-visibility:hidden; z-index:1; cursor:-webkit-grab;}
+.swiper-wrapper {}
+.swiper-slide {width:100%; height:auto; display:block; overflow:hidden; float:left; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; padding-left:0.4rem;}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
