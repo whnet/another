@@ -86,7 +86,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <span class="bg-greyf1"></span>
                                 <span class="bg-greyf1"></span>
                             </a>
-                            <p class="fs30 fc-greyabc mt10">上传名片2</p>
+                            <p class="fs30 fc-greyabc mt10">上传名片</p>
                         </div>
                         <div class="upload-card bc-grey upload-card-ok cardUpload" id="certifiedPic" style="display:none;">
                             <img src="<?=Yii::$app->params['public'].'/attachment'.$apply['card']?>">

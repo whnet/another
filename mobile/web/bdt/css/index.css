@@ -1934,3 +1934,63 @@ p.pictext-text:last-of-type{padding:0; }
 }
 .comment{margin:0 .1rem;}
 .comment-item .username{display:inline-block;}
+
+/*评论*/
+.comment-box,.comment-box2{
+    overflow: hidden;
+    border-top: .02rem solid #f1f1f1;
+    margin-bottom: .2rem;
+    margin-top:.2rem;
+}
+
+.comment-content {
+    width: 80%;
+    margin-top: .3rem;
+    padding: 0.4rem 0.2rem 0.4rem 1.5rem;
+    background: url(../images/comment_icon.png) 0.35rem center no-repeat;
+    background-size:1rem;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+    border:.02rem solid #f1f1f1;
+}
+
+.comment-btn {
+    width: 17%;
+    float: right;
+    display: inline-block;
+    background: #e95513;
+    color: white;
+    text-align: center;
+    margin-top: .3rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    border-radius: 5px;
+}
+
+/*评论列表*/
+.comment_list {
+    overflow: hidden;
+    background: #f5f5f5;
+}
+.comment-item {
+    padding: .25rem .4rem;
+}
+
+.comment-item .username {
+    display: inline-block;
+}
+.username {
+    font-size: .7rem;
+    display: block;
+}
+
+.comment-main i {
+    font-style: normal;
+}
+.comment-main .content {
+    color: #000;
+    font-size: 14px;
+    background: #f5f5f5;
+}

@@ -230,14 +230,6 @@ function configDynamicList(result,index){
                 }
             }
         }
-// 开始点评
-        if(result.data.list[i].comment.length){
-            for(var k=0;k<result.data.list[i].comment.length;k++){
-                if(result.com == result.data.list[i].comment[k].member_id){
-                    pubcommentClick()
-                }
-            }
-        }
 
 
         //循环点赞
@@ -337,9 +329,9 @@ function configDynamicList(result,index){
             '<span class="fc-red"></span><div class="statistic">' +
             '<a class="like fc-greyabc ' + onFcRed + '" onclick="dianzanClick(' + result.data.list[i].id + ',1,' + result.mid + ')" id="dianzan' + result.data.list[i].id + '">' + dianzan + '</a>' +
             // 评论
-            '<a class="comment ml10 fc-greyabc"  onclick="pubcommentClick(' + result.data.list[i].comment + ',1,' + result.com + ',this,1)" id="comment' + result.data.list[i].comment + '">' + comment + '</a>' +
+            '<a class="comment ml10 fc-greyabc"   id="comment' + result.data.list[i].id + '">' + comment + '</a>' +
 
-            '<a class="comment_num ml10 fc-greyabc" id="comment_num_'+ result.data.list[i].id+'"  href="javascript:void(0)" ></a>'+
+              // '<a class="comment_num ml10 fc-greyabc" id="comment_num_'+ result.data.list[i].id+'"  href="javascript:void(0)" ></a>'+
             '</div></div></div></div>';
         }
     }
@@ -421,6 +413,10 @@ function IsPC()
 function gotoLou(id){
     window.location.href = "/loupan/loupan_page.html?id="+id;
 }
+
+
+
+
 
 
 

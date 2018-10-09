@@ -1,8 +1,5 @@
-/*@media screen and (max-width: 413px){#smallNav>div:nth-of-type(1)>p>span{padding:0 14px;color:red;}}*/
-@media screen and (max-width: 414px){#smallNav>div:nth-of-type(1)>p>span{padding:0 15px;}}
-#smallNav>div:nth-of-type(1)>p>span:nth-child(7) {padding-left: 10px;}
+@media screen and (max-width: 414px){#smallNav>div:nth-of-type(1)>p>span{padding:0 16px;}}
 @media screen and (max-width:374px) {#smallNav>div:nth-of-type(1)>p>span:nth-child(6),
-#smallNav>div:nth-of-type(1)>p>span:nth-child(11){padding-left:10px;}
     #smallNav>div:nth-of-type(1)>p>span:nth-child(7){padding-left:0;}}
 
 #smallNav>div:nth-of-type(1)>p{padding-right:0.5rem;}

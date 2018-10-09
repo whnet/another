@@ -17,7 +17,8 @@
         height:50%;
     }
     .answerway0{width:50%;float:left;}
-    .qanda-certify-rights>div>input[type=text]{width:3.5rem!important;}
+    .qanda-certify-rights>div>input[type=text]{width:3.2rem!important;margin-left:.25rem!important;margin-right:.25rem!important;}
+    .qanda-certify-rights>div{padding-right:0!important;}
 </style>
 <div id="container" class="container">
     <div id="page">
