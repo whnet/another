@@ -1,4 +1,5 @@
 // qanda_certify.js
+//判断是否专家简介开始先输入br  24
 var indexID = 0;
 var targetId = "";
 var currentPage = 1;
@@ -21,6 +22,12 @@ $(document).ready(function() {
     $('.cardUpload').click(function(e) {
         chooseImage();
     })
+    // 判断是否专家简介开始先输入br
+    // var br=$("#masterInfo").children(":first").prop("tagName");
+    // console.log(br)
+    // if(br=="br"){
+    //     $("#masterInfo").children().first().hide();
+    // }
 });
 //微信上传接口
 
@@ -201,6 +208,8 @@ function applyMasterMethods(){
 }
 //提交资料审核
 function sendInfosForExpert(realName, askPrice, masterInfo, masterTitle, type){
+    // var br=$("#masterInfo").children(":first").prop("tagName");
+    // console.log(br)
     var mid = $('input[name="mid"]').val();
     if(mid){
         url = "/members/changeapply.html"

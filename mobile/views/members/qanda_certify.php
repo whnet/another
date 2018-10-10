@@ -94,7 +94,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php endif;?>
                     <input type="hidden" name="uploadCertifiedPic" value="<?=$apply['card']?>"/>
                 </div>
-                <a class="qanda-certify-postbtn bg-orange fc-white fs30" onclick="applyMasterMethods()">申请成为专家</a>
+                <?php if($apply['realname']):?>
+                    <a class="qanda-certify-postbtn bg-orange fc-white fs30" onclick="applyMasterMethods()">确认修改</a>
+                <?php else:?>
+                    <a class="qanda-certify-postbtn bg-orange fc-white fs30" onclick="applyMasterMethods()">申请成为专家</a>
+                <?php endif;?>
                 <p>
                     <label id="protocolLabel" class="fs24">
                         <input id="aggre" type="checkbox" class="bg-greyf1 mr5" checked="true">我已阅读并同意

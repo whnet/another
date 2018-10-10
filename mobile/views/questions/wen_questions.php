@@ -109,7 +109,6 @@
             setTimeout(function() {
                 $('.j_dialog').show();
                 $('#helptext').show();
-                // $('#helptext').css('margin-top', -$('#helptext').height() / 2);
                 if ($('#helptext').height() >= Math.floor($('body').height() * 0.70)) {
                     $('#helptext').find('.appui-helptext-bd').height($('#helptext').height() - $('.appui-helptext-hd').height() - $('.appui-helptext-fd').height());
                 }

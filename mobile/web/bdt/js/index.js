@@ -12,7 +12,7 @@ var start = 0;
 
 // iosAPP屏蔽 start
 window.onload = function(){
-        $("#indexNoticeMsg").hide();
+    $("#indexNoticeMsg").hide();
 };
 // iosAPP屏蔽 end
 
@@ -28,69 +28,69 @@ $(document).ready(function() {
     $('#closePubBtn').click(function() {
         $('.publish-type').fadeOut();;
     });
-	
+
     $("#iosDialog1 .tips_close").on('click',function(event){event.preventDefault();$("#iosDialog1").hide();});//关闭弹框
     $("#iosDialog1 .tips_content").on('click',function(event){event.preventDefault();location.href = "/mycoupon.html";});//优惠券弹框提示点击进入优惠券页面
 
-	
-	
-	//点击搜索对应操作
+
+
+    //点击搜索对应操作
     $('#searchID').click(function(){
         $('body').append(initSearchUI());
         $('.search-container').show();
         set_focus();
     });
 
-	//消息提醒点击对应操作
+    //消息提醒点击对应操作
     $('.right-icon').click(function(){
-            window.location.href = "/members/myhomepage.html?read=0";
+        window.location.href = "/members/myhomepage.html?read=0";
     });
 //请求页面数据
     getSquarePageListRequest();
-	//页面滚动
-	$('.page__bd').scroll(function(){
-		if ($(this).scrollTop()<=100){//滚动过程中对头部导航和消息提示做出操作
-			$("#topBigDiv").removeClass('b-b-greyf1 bg-white');
-			$("#topBigDiv .right-icon>img").attr("src","../bdt/images/notice1.png");
-		}
-		if (moreDataflag==0){
-			var a = "";
-			if ($('#downloadMoreData').length>0){
-				a = document.getElementById("downloadMoreData").offsetTop;
-				if (a >= $(this).scrollTop() && a < ($(this).scrollTop()+$(window).height()-40)) {
-					moreDataflag = -1;
-					downloadMoreData();
-				}
-			}
-		};
-	});
+    //页面滚动
+    $('.page__bd').scroll(function(){
+        if ($(this).scrollTop()<=100){//滚动过程中对头部导航和消息提示做出操作
+            $("#topBigDiv").removeClass('b-b-greyf1 bg-white');
+            $("#topBigDiv .right-icon>img").attr("src","../bdt/images/notice1.png");
+        }
+        if (moreDataflag==0){
+            var a = "";
+            if ($('#downloadMoreData').length>0){
+                a = document.getElementById("downloadMoreData").offsetTop;
+                if (a >= $(this).scrollTop() && a < ($(this).scrollTop()+$(window).height()-40)) {
+                    moreDataflag = -1;
+                    downloadMoreData();
+                }
+            }
+        };
+    });
 
 
 
-	//滚动事件监听-处理头部消息提醒图片问题
-	document.addEventListener('touchstart', function (ev) {
-		if ($(".index_entrance").offset().top>0){
-			closeSwiper = 1;
-			$("#topBigDiv").removeClass('b-b-greyf1 bg-white');
-			$("#topBigDiv .right-icon>img").attr("src","../bdt/images/notice1.png");
-		}
-	},false);
-	document.addEventListener('touchend', function (ev) {
-		if ($(".index_entrance").offset().top<=0) {
-			closeSwiper = 0;
-			$("#topBigDiv").addClass('b-b-greyf1 bg-white');
-			$("#topBigDiv .right-icon>img").attr("src","../bdt/images/notice.png");
-		}else{
-			closeSwiper = 1;
-			$("#topBigDiv").removeClass('b-b-greyf1 bg-white');
-			$("#topBigDiv .right-icon>img").attr("src","../bdt/images/notice1.png");
+    //滚动事件监听-处理头部消息提醒图片问题
+    document.addEventListener('touchstart', function (ev) {
+        if ($(".index_entrance").offset().top>0){
+            closeSwiper = 1;
+            $("#topBigDiv").removeClass('b-b-greyf1 bg-white');
+            $("#topBigDiv .right-icon>img").attr("src","../bdt/images/notice1.png");
+        }
+    },false);
+    document.addEventListener('touchend', function (ev) {
+        if ($(".index_entrance").offset().top<=0) {
+            closeSwiper = 0;
+            $("#topBigDiv").addClass('b-b-greyf1 bg-white');
+            $("#topBigDiv .right-icon>img").attr("src","../bdt/images/notice.png");
+        }else{
+            closeSwiper = 1;
+            $("#topBigDiv").removeClass('b-b-greyf1 bg-white');
+            $("#topBigDiv .right-icon>img").attr("src","../bdt/images/notice1.png");
 
-		}
-	}, false);
+        }
+    }, false);
     var expert = $('input[name="expert"]').val();
-   if(expert){
-       noRead();
-   }
+    if(expert){
+        noRead();
+    }
 
 });
 
@@ -124,17 +124,17 @@ function noRead(){
 
 //配置轮播图
 function configSwiperUI(){
-	var mySwiper = new Swiper('.swiper-container',{
-		autoplay: 3500,//可选选项，自动滑动
-		pagination: '.swiper-pagination',
-		paginationClickable: true,
-		autoHeight: true,
-		autoplayDisableOnInteraction : false,
-		onSlideChangeStart: function(swiper){
-			var indexNum = swiper.activeIndex;
-	    },
-	});
-	mySwiper.onResize();
+    var mySwiper = new Swiper('.swiper-container',{
+        autoplay: 3500,//可选选项，自动滑动
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoHeight: true,
+        autoplayDisableOnInteraction : false,
+        onSlideChangeStart: function(swiper){
+            var indexNum = swiper.activeIndex;
+        },
+    });
+    mySwiper.onResize();
 }
 
 
@@ -145,8 +145,8 @@ function gotoQADetailHtml(id, e){
     }else{
         setElementClickStyle(element);
     }
-	(typeof saveStatusBeforeJump!='undefined')&&saveStatusBeforeJump();//首先将当前页面的数据和状态保存下来，方便跳转回来保持状态
-	window.location.href = "qanda_detail.html?id="+id;
+    (typeof saveStatusBeforeJump!='undefined')&&saveStatusBeforeJump();//首先将当前页面的数据和状态保存下来，方便跳转回来保持状态
+    window.location.href = "qanda_detail.html?id="+id;
 }
 
 function getSquarePageListRequest(){
@@ -159,15 +159,15 @@ function getSquarePageListRequest(){
         async: true,
         data: {
             "currentPage": currentPage,
-			"start":start,
-			"pernum":pernum,
-			"_csrf":csrf,
+            "start":start,
+            "pernum":pernum,
+            "_csrf":csrf,
         },
         success: function(result) {
             if (result.result == "success") {
-            	currentPage = result.data.page.currentPage;
-				totalPage = result.data.page.pages;
-				configDynamicList(result,2);
+                currentPage = result.data.page.currentPage;
+                totalPage = result.data.page.pages;
+                configDynamicList(result,2);
             } else {
                 dataLoadedError(result.message);
             }
@@ -178,7 +178,7 @@ function getSquarePageListRequest(){
 
 //生成数据列表
 function configDynamicList(result,index){
-	var list = "";
+    var list = "";
     for(var i = 0; i < result.data.list.length; i++){
         //文章配图
         if(result.data.list[i].pics){
@@ -224,7 +224,7 @@ function configDynamicList(result,index){
         if(result.data.list[i].dianzan.length){
             for(var j=0;j<result.data.list[i].dianzan.length;j++){
                 if(result.mid == result.data.list[i].dianzan[j].member_id){
-                           onFcRed += 'on fc-red';
+                    onFcRed += 'on fc-red';
                 }else{
                     onFcRed += '';
                 }
@@ -323,16 +323,16 @@ function configDynamicList(result,index){
                 '<span class="fs30 fc-blue operate">' + username + '<em class="fc-greyabc"></em></span>' +
                 // 专家简介
                 '<span class="fs24 operat mt5">' + info + '</span>' +
-            '</div></div><div class="f-h-right"></div></div>' + contents + '<div class="time-statistic fs22" id="bottom_1_' + result.data.list[i].id + '">' +
-            '<span class="fc-greyabc mr10"><i>' + getDateDiff(result.data.list[i].created) + '</i></span>' +
-            '<span class="fc-greyabc"><i>' + result.data.list[i].counts + '</i>阅读</span>' +
-            '<span class="fc-red"></span><div class="statistic">' +
-            '<a class="like fc-greyabc ' + onFcRed + '" onclick="dianzanClick(' + result.data.list[i].id + ',1,' + result.mid + ')" id="dianzan' + result.data.list[i].id + '">' + dianzan + '</a>' +
-            // 评论
-            '<a class="comment ml10 fc-greyabc"   id="comment' + result.data.list[i].id + '">' + comment + '</a>' +
+                '</div></div><div class="f-h-right"></div></div>' + contents + '<div class="time-statistic fs22" id="bottom_1_' + result.data.list[i].id + '">' +
+                '<span class="fc-greyabc mr10"><i>' + getDateDiff(result.data.list[i].created) + '</i></span>' +
+                '<span class="fc-greyabc"><i>' + result.data.list[i].counts + '</i>阅读</span>' +
+                '<span class="fc-red"></span><div class="statistic">' +
+                '<a class="like fc-greyabc ' + onFcRed + '" onclick="dianzanClick(' + result.data.list[i].id + ',1,' + result.mid + ')" id="dianzan' + result.data.list[i].id + '">' + dianzan + '</a>' +
+                // 评论
+                '<a class="comment ml10 fc-greyabc"   id="comment' + result.data.list[i].id + '">' + comment + '</a>' +
 
-              // '<a class="comment_num ml10 fc-greyabc" id="comment_num_'+ result.data.list[i].id+'"  href="javascript:void(0)" ></a>'+
-            '</div></div></div></div>';
+                // '<a class="comment_num ml10 fc-greyabc" id="comment_num_'+ result.data.list[i].id+'"  href="javascript:void(0)" ></a>'+
+                '</div></div></div></div>';
         }
     }
 
@@ -357,16 +357,16 @@ function showMessage(result){
 
 //增加发布按钮
 function AddBut(){
-	if($("#sendMessage").length>0){
-		$("#sendMessage").remove();
-	}
-	$('body').append('<a class="publish-btn publish-btn-square bg-white " id="sendMessage"><img src="../bdt/images/publish_pen.png" /></a>');
-	//显示发布选项
+    if($("#sendMessage").length>0){
+        $("#sendMessage").remove();
+    }
+    $('body').append('<a class="publish-btn publish-btn-square bg-white " id="sendMessage"><img src="../bdt/images/publish_pen.png" /></a>');
+    //显示发布选项
 
-	$('#sendMessage').click(function(e){//显示发布选项
-		$('.publish-type').fadeIn();
-		$('.publish-type-list').css('margin-top',-$('.publish-type-list').height()/2);
-	});
+    $('#sendMessage').click(function(e){//显示发布选项
+        $('.publish-type').fadeIn();
+        $('.publish-type-list').css('margin-top',-$('.publish-type-list').height()/2);
+    });
 }
 
 //加载更过-拼命加载中...时候进行的网络请求；
@@ -380,7 +380,7 @@ function audioAutoPlay(id){
     var audio = document.getElementById(id);
     audio.play();
     document.addEventListener("WeixinJSBridgeReady", function (){
-		audio.play();
+        audio.play();
     }, false);
 }
 
@@ -395,24 +395,26 @@ $(window).load(function(){
         $('.page__bd').scrollTop(scrollPosition);
     }
     removeClientSession("scrollPosition");
-    
+
 });
 
 
 
-function IsPC()  
-{  
-   var userAgentInfo = navigator.userAgent;  
-   var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
-   var pcOrMobil = true;  
-   for (var v = 0; v < Agents.length; v++) {  
-	   if (userAgentInfo.indexOf(Agents[v]) > 0) { pcOrMobil = false; break; }  
-   }  
-   return pcOrMobil;  
+function IsPC()
+{
+    var userAgentInfo = navigator.userAgent;
+    var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+    var pcOrMobil = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) { pcOrMobil = false; break; }
+    }
+    return pcOrMobil;
 }
 function gotoLou(id){
     window.location.href = "/loupan/loupan_page.html?id="+id;
 }
+
+
 
 
 
