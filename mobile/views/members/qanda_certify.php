@@ -74,7 +74,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <!--名片上传-->
                 <div class="qanda-certify-item bg-white mt10">
-                    <?php if(isset($apply['card'])):?>
+                    <?php if($apply['card']):?>
                         <h3 class="fs32 fc-grey999" id="certifiedPicTips">当前名片<span class='fs28 fc-orange'>（点击可重新上传名片）</span></h3>
                         <div class="upload-card bc-grey upload-card-ok cardUpload" id="certifiedPic" style="display:block;">
                             <img src="<?=Yii::$app->params['public'].'/attachment'.$apply['card']?>">
